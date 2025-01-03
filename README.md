@@ -4,11 +4,18 @@ Looks for invalid `PNG` files, which commonly cause crashes and warnings in Cele
 
 ## Usage
 
-Just run the executable. Running it from a CLI or double-clicking on it should work.
+- Get the release from the repository page.
+- Pick the folder which matches your operating system and run the executable.
+- Enter the absolute path to your mods folder and press <kbd>Enter</kbd>.
+
+The program will search all of your mod folders and .zips in search for invalid `PNG`s in the `Graphics/Atlases` folder.
+
+> [!NOTE]
+> If the mod folder does not have an `everest.yaml`, it will be skipped.
 
 ## Building
 
-Simply clone the repository and `dotnet build`.
+Simply clone the repository and **build** the solution.
 
-To distribute the executable you need to `dotnet publish` with a platform and configuration of your choosing.  
+To distribute the executable you need to **publish** the solution with a runtime identifier and configuration of your choosing.  
 This will publish the project as a self-contained executable, which avoids the need to install the .NET 9 runtime.
