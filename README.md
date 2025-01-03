@@ -19,3 +19,6 @@ Simply clone the repository and **build** the solution.
 
 To distribute the executable you need to **publish** the solution with a runtime identifier and configuration of your choosing.  
 This will publish the project as a self-contained executable, which avoids the need to install the .NET 9 runtime.
+
+> [!TIP]
+> Rider users should have Windows (x64), Linux (x64) and OSX (ARM64) run configurations ready to use.
