@@ -122,12 +122,21 @@ internal static class Program
                 Console.ResetColor();
                 ConsoleLock.Exit();
             }
+            catch (UnknownImageFormatException)
+            {
+                ConsoleLock.Enter();
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine(
+                    $"[{directoryName}] Image \"{imageName}\" is invalid or corrupted.");
+                Console.ResetColor();
+                ConsoleLock.Exit();
+            }
             catch (Exception e)
             {
                 ConsoleLock.Enter();
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine(
-                    $"[{directoryName}] Image \"{imageName}\" is invalid or corrupted. ({e.GetType().FullName}: {e.Message})");
+                    $"[{directoryName}] Image \"{imageName}\" could not be read. ({e.GetType().FullName}: {e.Message})");
                 Console.ResetColor();
                 ConsoleLock.Exit();
             }
@@ -177,12 +186,21 @@ internal static class Program
                     Console.ResetColor();
                     ConsoleLock.Exit();
                 }
+                catch (UnknownImageFormatException)
+                {
+                    ConsoleLock.Enter();
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.WriteLine(
+                        $"[{fileName}] Image \"{imageName}\" is invalid or corrupted.");
+                    Console.ResetColor();
+                    ConsoleLock.Exit();
+                }
                 catch (Exception e)
                 {
                     ConsoleLock.Enter();
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
                     Console.WriteLine(
-                        $"[{fileName}] Image \"{imageName}\" is invalid or corrupted. ({e.GetType().FullName}: {e.Message})");
+                        $"[{fileName}] Image \"{imageName}\" could not be read. ({e.GetType().FullName}: {e.Message})");
                     Console.ResetColor();
                     ConsoleLock.Exit();
                 }
