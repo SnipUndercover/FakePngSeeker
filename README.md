@@ -1,4 +1,4 @@
-# FakePngSeeker
+# [FakePngSeeker](https://github.com/SnipUndercover/FakePngSeeker)
 
 Looks for invalid `PNG` files, which commonly cause crashes and warnings in Celestecord's Banana Watch thread.
 
