@@ -5,7 +5,14 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+
+        <!-- hide usernames in pdbs -->
         <PathMap>$(MSBuildProjectDirectory)=FakePngSeeker/</PathMap>
+
+        <!-- publish as a self-contained executable -->
+        <SelfContained>true</SelfContained>
+        <PublishSingleFile>true</PublishSingleFile>
+        <PublishTrimmed>true</PublishTrimmed>
     </PropertyGroup>
 
     <ItemGroup>
